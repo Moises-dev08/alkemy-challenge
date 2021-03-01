@@ -13,6 +13,6 @@ app.use(bodyParser.json());
 
 app.use("/api", apiRouter);
 
-app.listen(3030, () => {
+app.listen(3031, () => {
   console.log("Server initiated...");
 });
