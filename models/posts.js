@@ -6,7 +6,7 @@ module.exports = (sequelize, type) => {
       autoIncrement: true,
     },
     title: type.STRING,
-    content: type.INTEGER,
+    content: type.STRING,
     image: type.STRING,
     category: type.STRING,
     date: type.DATEONLY,
