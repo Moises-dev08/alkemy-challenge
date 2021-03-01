@@ -7,12 +7,19 @@ const PostDetails = () => {
   const [post, setPost] = useState([]);
   const { id } = useParams();
 
-  useEffect(async () => {
-    let apiEndpoint = "https://jsonplaceholder.typicode.com/posts";
-    const result = await axios(`${apiEndpoint}/${id}`);
+  useEffect(() => {
+    const fetchData = async () => {
+      let apiEndpoint = "https://jsonplaceholder.typicode.com/posts";
 
-    setPost([result.data]);
-  }, []);
+      const result = await axios(`${apiEndpoint}/${id}`);
+
+      setPost([result.data]);
+
+      return result;
+    };
+
+    fetchData();
+  }, [id]);
 
   return (
     <div className="postDetails">
