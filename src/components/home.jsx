@@ -6,12 +6,15 @@ import "./home.css";
 const Home = () => {
   const [posts, setPosts] = useState([]);
 
-  useEffect(async () => {
-    const result = await axios("https://jsonplaceholder.typicode.com/posts");
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios("https://jsonplaceholder.typicode.com/posts");
 
-    setPosts(result.data);
+      setPosts(result.data);
 
-    return result;
+      return result;
+    };
+    fetchData();
   }, []);
 
   return (
@@ -21,15 +24,16 @@ const Home = () => {
           <h3>All Posts</h3>
           {posts.map((item) => (
             <div className="home__postsLeft">
+              <h4>Title: </h4>
               <div key={item.id}>{item.title}</div>
               <div className="home__postsRight">
                 <Link to={`/postDetails/${item.id}`}>
                   <button>See more details</button>
                 </Link>
-                <Link to="/editPost">
+                <Link to={`/editPost/${item.id}`}>
                   <button>Edit post</button>
                 </Link>
-                <Link to="/delete">
+                <Link to={`/delete/${item.id}`}>
                   <button>Delete post</button>
                 </Link>
               </div>
