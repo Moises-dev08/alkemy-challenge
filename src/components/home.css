@@ -1,0 +1,8 @@
+.home {
+  display: flex;
+  justify-content: center;
+}
+
+.home__button {
+  margin: 10px 10px 0 0;
+}

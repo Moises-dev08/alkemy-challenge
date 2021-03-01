@@ -1,0 +1,20 @@
+.postForm {
+  display: flex;
+  justify-content: center;
+}
+
+.postForm__form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.postForm__title,
+.postForm__button {
+  margin-top: 15px;
+}

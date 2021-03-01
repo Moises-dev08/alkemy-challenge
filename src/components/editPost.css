@@ -1,0 +1,20 @@
+.editForm {
+  display: flex;
+  justify-content: center;
+}
+
+.editForm__form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.editForm__title,
+.editForm__button {
+  margin-top: 15px;
+}

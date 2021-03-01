@@ -28,13 +28,13 @@ const Home = () => {
               <div key={item.id}>{item.title}</div>
               <div className="home__postsRight">
                 <Link to={`/postDetails/${item.id}`}>
-                  <button>See more details</button>
+                  <button className="home__button">See more details</button>
                 </Link>
                 <Link to={`/editPost/${item.id}`}>
-                  <button>Edit post</button>
+                  <button className="home__button">Edit post</button>
                 </Link>
-                <Link to={`/delete/${item.id}`}>
-                  <button>Delete post</button>
+                <Link to={`/deletedPost/${item.id}`}>
+                  <button className="home__button">Delete post</button>
                 </Link>
               </div>
             </div>
